@@ -1,10 +1,8 @@
-<?php
-// Koneksi ke database
+<?php 
 include "koneksi.php";
-// Mendapatkan ID mahasiswa yang akan dihapus
 $id = $_GET['id'];
-// Query hapus data mahasiswa 
-$sql = "DELETE FROM mahasiswa WHERE id='$id'";
-if (mysqli_query($link, $sql)) {
-header('Location: tampil_data.php');
+$sql = "DELETE FROM mahasiswa WHERE id = '$id'";
+if(mysqli_query($link, $sql)){
+	header("location:tampil_data.php");
 }
+?>
